@@ -17,6 +17,9 @@ const ext = {
 				flex-wrap: wrap;
 				width: auto;
 			}
+			.subtabs {
+			flex-basis: 100%;
+	}
 			.image-entry {
 				width: 80px;
 				height: 80px;
@@ -383,7 +386,8 @@ const ext = {
 					}
 
                     //Gallery
-                    if (valuesnames.length > 0 && currentNode.type.startsWith("LoadImage")) {
+                    if (valuesnames.length > 0 && currentNode.type.startsWith("LoadImage"&&
+						currentNode.type !== "Load Image (from Outputs)")) {
 						const isChannelList = currentNode.type === "LoadImageMask" && 
                           valuesnames.some(v => ["alpha", "red", "green", "blue"].includes(v));
                         if (!isChannelList) {
