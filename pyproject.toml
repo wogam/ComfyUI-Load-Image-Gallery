@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-load-image-gallery"
 description = "Adds a gallery to the Load Image node and tabs for Load Checkpoint/Lora/etc nodes"
-version = "2.2"
+version = "2.3"
 # license = {file = "LICENSE"}
 
 [project.urls]
