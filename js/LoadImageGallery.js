@@ -386,8 +386,7 @@ const ext = {
 					}
 
                     //Gallery
-                    if (valuesnames.length > 0 && currentNode.type.startsWith("LoadImage"&&
-						currentNode.type !== "Load Image (from Outputs)")) {
+                    if (valuesnames.length > 0 && currentNode.type.startsWith("LoadImage")) {
 						const isChannelList = currentNode.type === "LoadImageMask" && 
                           valuesnames.some(v => ["alpha", "red", "green", "blue"].includes(v));
                         if (!isChannelList) {
@@ -466,5 +465,6 @@ const ext = {
         LiteGraph.ContextMenu.prototype = ctxMenu.prototype;
     },
 }
+
 
 app.registerExtension(ext);
