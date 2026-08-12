@@ -1,14 +1,12 @@
 [project]
 name = "comfyui-load-image-gallery"
 description = "Adds a gallery to the Load Image node and tabs for Load Checkpoint/Lora/etc nodes"
-version = "2.3"
-# license = {file = "LICENSE"}
+version = "2.4"
 
 [project.urls]
-Repository = "https://github.com/OgreLemonSoup/ComfyUI-Load-Image-Gallery"
-#  Used by Comfy Registry https://comfyregistry.org
+Repository = "https://github.com/wogam/ComfyUI-Load-Image-Gallery"
 
 [tool.comfy]
-PublisherId = "ogrelemonsoup"
+PublisherId = "wogam"
 DisplayName = "ComfyUI-Gallery-and-Tabs"
 Icon = ""
