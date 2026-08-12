@@ -205,8 +205,15 @@ const ext = {
 
                     const structure = { Root: { files: [] } };
                     items.forEach(entry => {
-                        const path = entry.getAttribute('data-value') || entry.textContent || "";
+                        const path = entry.getAttribute('data-value') || entry.value || entry.textContent || "";
+                        if (!entry.hasAttribute('data-value')) {
+                            entry.setAttribute('data-value', path);
+                            entry.setAttribute('title', path);
+                        }
                         const parts = path.split(separator);
+                        const fileNameOnly = parts[parts.length - 1] || path;
+                        entry.textContent = fileNameOnly;
+
                         let current = structure;
                         if (parts.length === 1) {
                             structure.Root.files.push(entry);
